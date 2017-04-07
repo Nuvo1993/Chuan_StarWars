@@ -1,3 +1,16 @@
+<?php
+
+require_once ('connection.php');
+
+if(isset($_GET['controller']) && isset($_GET['action'])){
+    $controller = $_GET['controller'];
+    $action = $_GET['action'];
+}else{
+    $controller = 'pages';
+    $action = 'index';
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +20,6 @@
     <link rel="stylesheet" href="Content/bootstrap_css/bootstrap.css">
     <link rel="stylesheet" href="Content/bootstrap_css/bootstrap-theme.css">
     <link rel="stylesheet" href="Content/styles.css">
-
 
 </head>
 <body id="bootstrap-overrides">
@@ -25,28 +37,14 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="Views/quiz.html">Quiz</a></li>
+                    <li class="active"><a href="/searchwars">Home</a></li>
+                    <li><a href="?controller=quiz&action=index">Quiz</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
     </nav>
 
-    <div class="container">
-
-        <div class="starter-template">
-            <h1>The worlds first Star Wars search engine</h1>
-            <p class="lead">Probably not though...</p>
-            <div id="searchBar">
-                <span>Search for anything Star Wars related</span>
-                <input type="text" id="searchBox">
-                <input type="submit" value="Search" id="search">
-            </div>
-        </div>
-
-
-    </div><!-- /.container -->
-
+    <?php require_once('routes.php'); ?>
 
     <script src="Scripts/bootstrap_js/jquery.min.js"></script>
     <script src="Scripts/bootstrap_js/bootstrap.js"></script>
