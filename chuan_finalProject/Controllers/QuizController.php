@@ -20,5 +20,29 @@ class QuizController
         require_once ('Views/quiz.php');
     }
 
-    public function submit(){}
+    public function submit(){
+
+        if(isset($_POST['quizSubmit'])){
+
+            $service = new QuizService();
+
+            $categories = $service->getAllCategories();
+
+            foreach ($categories as $category){
+
+                $count = 0;
+                $name = $category->getName();
+
+                while($count < 40){
+
+                    if(isset($_POST[$name . $count])){
+                        echo "Selected value: " . $_POST[$name . $count] . '<br>'; //Selected value.
+                    }
+                    $count++;
+                }
+
+            }
+
+        }
+    }
 }

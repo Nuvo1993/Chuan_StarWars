@@ -9,18 +9,40 @@
 
 <h1>Quiz page</h1>
 
-<?php foreach ($questions as $key=>$value) { ?>
-    <div>
-        <?php echo $key+1 . '. ' . $value->getQuestion(); ?>
-    </div>
+<form action="?controller=quiz&action=submit" method="post">
 
-    <div>
-        <?php
-        $answers = $serviceQuestions->getAnswerByQuestion($key+1);
+    <?php
 
-        foreach($answers as $answer){
-            echo $answer->getAnswer() . '<br>';
-        }
-        ?>
-    </div>
-<?php } ?>
+        $previous ='';
+        foreach ($questions as $key=>$value) { ?>
+        <div>
+            <p id="category">
+                <?php
+
+                    $current = $value->getCategoryName();
+
+                    if($previous != $current){
+                        echo 'Category: ' . $current;
+                    }
+
+                    $previous = $current;
+                ?>
+            </p>
+            <?php echo $key+1 . '. ' . $value->getQuestion(); ?>
+        </div>
+
+        <div id="answerGroup" style="margin-left: 10px;">
+            <?php
+            $answers = $serviceQuestions->getAnswerByQuestion($key+1);
+            $radioName = $current . $key;
+            foreach($answers as $answer){ ?>
+                <input type="radio" name="<?php echo $radioName ?>" value="<?php echo $answer->getId();?>"> <?php echo $answer->getAnswer(); ?><br>
+            <?php
+                }
+            ?>
+        </div>
+    <?php } ?>
+
+    <input type="submit" name="quizSubmit" id="quizSubmit" style="color:black;margin-top: 10px;" value="Submit Quiz"/>
+</form>
+
