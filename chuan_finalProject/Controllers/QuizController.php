@@ -14,7 +14,7 @@ class QuizController
         $categories = $serviceQuestions->getAllCategories();
 
         //path is relative to routes.php
-        require_once ('Views/quiz.php');
+        require_once ('../Views/quiz.php');
     }
 
     public function submit(){

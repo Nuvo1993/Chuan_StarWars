@@ -9,14 +9,7 @@
 class PagesController
 {
 
-    /**
-     *
-     */
-    public function index() {
-        require_once('Views/index.html');
-    }
-
     public function error() {
-        require_once('Views/error.html');
+        require_once('../Views/error.html');
     }
 }

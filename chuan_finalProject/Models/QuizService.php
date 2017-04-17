@@ -7,8 +7,8 @@
  * Time: 12:14 PM
  */
 
-require_once ('Models/QuizDAO.php');
-require_once ('Models/ValidationException.php');
+require_once ('QuizDAO.php');
+require_once ('ValidationException.php');
 
 class QuizService
 {
