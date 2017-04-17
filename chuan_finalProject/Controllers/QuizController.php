@@ -74,13 +74,23 @@ class QuizController
 
             if($score > 90){
 
+                echo '<div class="resultImg"><p>Image for 90% or above.</p></div>';
+
             }elseif ($score >= 80 && $score <= 89){
+
+                echo '<div class="resultImg"><p>Image for between 80% and 89%.</p></div>';
 
             }elseif ($score >= 70 && $score <= 79){
 
+                echo '<div class="resultImg"><p>Image for between 70% and 79%.</p></div>';
+
             }elseif ($score >= 60 && $score <= 69){
 
+                echo '<div class="resultImg"><p>Image for between 60% and 69%.</p></div>';
+
             }else{
+
+                echo '<div class="resultImg"><p>Image for below 60%.</p></div>';
 
             }
 
