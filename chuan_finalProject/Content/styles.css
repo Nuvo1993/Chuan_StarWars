@@ -9,7 +9,6 @@ body {
 }
 
 html {
-    background: url(imgs/space.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -17,7 +16,7 @@ html {
 }
 
 #bootstrap-overrides{
-    background-color: transparent;
+    background-color: #0f0f0f;
 }
 
 #search{
@@ -32,4 +31,18 @@ html {
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
+}
+
+.questionGroup {
+    text-align: justify;
+}
+
+.answerGroup {
+    text-align: justify;
+}
+
+.learnMoreText{
+    font-style: italic;
+    font-size: small;
+    color: whitesmoke;
 }
