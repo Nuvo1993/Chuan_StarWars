@@ -14,6 +14,7 @@
 
         <?php
         $previous = '';
+        //loop over categories
         foreach ($categories as $key=>$value){
             $categoryIndex = $key;
             ?>
@@ -21,6 +22,7 @@
                 <h3 class="category">
                     <a data-toggle="collapse" href="#categoryGroup<?php echo $categoryIndex ?>">
                         <?php
+                        //get one header per category.
                         $current = $value->getName();
 
                         if($previous != $current){
@@ -36,7 +38,7 @@
                     <?php
 
                     $questions = $serviceQuestions->getQuestionsByCategory($current);
-
+                    //loop over all questions within for category.
                     foreach ($questions as $key=>$value) {
                         $questionIndex = $value->getId();
                         ?>
@@ -44,10 +46,14 @@
                             <div class="questionGroup"><?php echo $questionIndex . '. ' . $value->getQuestion(); ?></div>
                             <div class="answerGroup" style="margin-left: 10px;">
                                 <?php
-
+                                //get answers based on question id/
                                 $answers = $serviceQuestions->getAnswerByQuestion($questionIndex);
+                                //set radio name value.
                                 $radioName = $current . $questionIndex;
+                                //randomize order.
+                                shuffle($answers);
 
+                                //loop through answer group and display.
                                 foreach($answers as $answer){ ?>
 
                                     <input type="radio" name="<?php echo $radioName ?>" value="<?php echo $answer->getId();?>"> <?php echo $answer->getAnswer(); ?><br>
