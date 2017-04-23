@@ -50,7 +50,7 @@ class QuizDAO
         $db = Db::getInstance();
         $req = $db->query(self::SELECT_ALL_CATEGORIES);
 
-        foreach ($req->fetch(PDO::FETCH_ASSOC) as $category){
+        foreach ($req->fetchAll() as $category){
             $quizCategory = new QuizCategory();
             $quizCategory->setName($category['name']);
             $list[] = $quizCategory;
