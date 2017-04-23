@@ -1,6 +1,6 @@
 body {
     padding-top: 50px;
-    color: #ffd700;
+    color: #FFE038;
 
 }
 .starter-template {
@@ -16,7 +16,16 @@ html {
 }
 
 #bootstrap-overrides{
-    background-color: #0f0f0f;
+    background-color: #17171A;
+}
+
+a{
+    color: #BEBDAD;
+}
+
+a:hover, a:focus {
+    color: #5D5D68;
+    text-decoration: underline;
 }
 
 #search{
@@ -33,6 +42,11 @@ html {
     border-radius: 50px;
 }
 
+#submissionResults, .questionAnswerGroup{
+    margin: auto;
+    width: 50%;
+}
+
 .questionGroup {
     text-align: justify;
 }
@@ -45,4 +59,9 @@ html {
     font-style: italic;
     font-size: small;
     color: whitesmoke;
+}
+
+.resultImg{
+    width: 150px;
+    height: 100px;
 }
