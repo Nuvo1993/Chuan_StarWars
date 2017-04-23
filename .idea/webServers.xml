@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="e72204cd-17ea-483c-960f-4bcf94dbbb61" name="Apache XAMMP" url="http://localhost/searchwars">
-        <fileTransfer port="0" mountedRoot="C:\xampp\htdocs" accessType="MOUNT" />
+        <fileTransfer port="0" mountedRoot="/Applications/XAMPP/htdocs" accessType="MOUNT" />
       </webServer>
     </option>
   </component>

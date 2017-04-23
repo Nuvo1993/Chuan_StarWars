@@ -43,7 +43,7 @@ function extraData(asyncRequest, textName)
   if (typeof data === 'string')
     alert(data);
   else
-    listBox.innerHTML += "<h2>"+textName+": "+data.name+"</h2><br>";
+    listBox.innerHTML += "<p>"+textName+": "+data.name+"</p><br>";
 }
 
 ///checks to see the which is the right url, if not it gives you the right message////////////////////////////////////////
@@ -106,10 +106,10 @@ function displayFilmsData(data)
   cartegoriesCounter = 0;
   var listBox = document.getElementById("searchResults");
   listBox.innerHTML = "";
-  listBox.innerHTML = "<h2>Title: "+data.results[0].title+"</h2>"+
+  listBox.innerHTML = "<p>Title: "+data.results[0].title+"</p>"+
     "<br><p>Episode: "+data.results[0].episode_id+"</p><br>"+
     "<p>Opening Crawl:</p><br><p>"+data.results[0].opening_crawl+
-    "<br><h2>Director: "+data.results[0].director+"</h2><br>"+
+    "<br><p>Director: "+data.results[0].director+"</p><br>"+
     "<p>Producer(s): "+data.results[0].producer+"</p>";
 }
 
@@ -146,7 +146,7 @@ function displayPlanetsData(data)
   var listBox = document.getElementById("searchResults");
   listBox.innerHTML = "";
   listBox.innerHTML = "<p>Name: "+data.results[0].name+"</p>"+
-    "<br><h2>Rotation Period: "+data.results[0].rotation_period+"</h2><br>"+
+    "<br><p>Rotation Period: "+data.results[0].rotation_period+"</p><br>"+
     "<p>Orbital Period: "+data.results[0].orbital_period+"</p><br>"+
     "<p>Diameter: "+data.results[0].diameter+"</p><br>"+
     "<p>Climate: "+data.results[0].climate+"</p><br>"+

@@ -6,7 +6,6 @@ body {
 .starter-template {
     padding: 40px 15px;
     text-align: center;
-    display: none;
 }
 
 html {
@@ -14,6 +13,13 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+#starWarsIntro{
+    height: 50%;
+    width: 50%;
+    text-align: center;
+    margin: auto;
 }
 
 
@@ -43,7 +49,6 @@ html {
 }
 
 #searchResults p{
-    float:left;
     font-size: small;
 }
 

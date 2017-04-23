@@ -38,9 +38,9 @@ function displayFilmsData(data)
   var listBox = document.getElementById("searchResults");
   listBox.innerHTML = "";
   listBox.innerHTML = "<p>Title: "+data.results[0].title+"</p>"+
-    "<br><h2>Episode: "+data.results[0].episode_id+"</h2><br>"+
+    "<br><p>Episode: "+data.results[0].episode_id+"</p><br>"+
     "<p>Opening Crawl:</><br><p>"+data.results[0].opening_crawl+
-    "<br><h2>Director: "+data.results[0].director+"</h2><br>"+
+    "<br><p>Director: "+data.results[0].director+"</p><br>"+
     "<p>Producer(s): "+data.results[0].producer+"</p>";
 }
 
@@ -58,8 +58,8 @@ function displayPeopleData(data)
 {
   var listBox = document.getElementById("searchResults");
   listBox.innerHTML = "";
-  listBox.innerHTML = "<h2>Name: "+data.results[0].name+"</h2>"+
-    "<br><h2>height: "+data.results[0].height+"</h2><br>"+
+  listBox.innerHTML = "<p>Name: "+data.results[0].name+"</p>"+
+    "<br><p>height: "+data.results[0].height+"</p><br>"+
     "<p>Mass: "+data.results[0].mass+"</p><br>"+
     "<p>Hair Color: "+data.results[0].hair_color+"</p><br>"+
     "<p>Skin Color: "+data.results[0].skin_color+"</p><br>"+
@@ -83,7 +83,7 @@ function displayPlanetsData(data)
   var listBox = document.getElementById("searchResults");
   listBox.innerHTML = "";
   listBox.innerHTML = "<h2>Name: "+data.results[0].name+"</h2>"+
-    "<br><h2>Rotation Period: "+data.results[0].rotation_period+"</h2><br>"+
+    "<br><p>Rotation Period: "+data.results[0].rotation_period+"</p><br>"+
     "<p>Orbital Period: "+data.results[0].orbital_period+"</p><br>"+
     "<p>Diameter: "+data.results[0].diameter+"</p><br>"+
     "<p>Climate: "+data.results[0].climate+"</p><br>"+
@@ -107,15 +107,15 @@ function displaySpeciesData(data)
 {
   var listBox = document.getElementById("searchResults");
   listBox.innerHTML = "";
-  listBox.innerHTML = "<h2>Name: "+data.results[0].name+"</h2>"+
+  listBox.innerHTML = "<p>Name: "+data.results[0].name+"</p>"+
     "<br><h2>Classification: "+data.results[0].classification+"</h2><br>"+
     "<p>Designation: "+data.results[0].designation+"</p><br>"+
-    "<h2>Average Height: "+data.results[0].average_height+"</h2><br>"+
-    "<h2>Skin Colors: "+data.results[0].skin_colors+"</h2><br>"+
-    "<h2>Hair Colors: "+data.results[0].hair_colors+"</h2><br>"+
-    "<h2>Eye Colors: "+data.results[0].eye_colors+"</h2><br>"+
-    "<h2>Average Lifespan: "+data.results[0].average_lifespan+"</h2><br>"+
-    "<h2>Language: "+data.results[0].language+"</h2><br>";
+    "<p>Average Height: "+data.results[0].average_height+"</p><br>"+
+    "<p>Skin Colors: "+data.results[0].skin_colors+"</p><br>"+
+    "<p>Hair Colors: "+data.results[0].hair_colors+"</p><br>"+
+    "<p>Eye Colors: "+data.results[0].eye_colors+"</p><br>"+
+    "<p>Average Lifespan: "+data.results[0].average_lifespan+"</p><br>"+
+    "<p>Language: "+data.results[0].language+"</p><br>";
 }
 
 ///Displaying the data for starships//////////////////////////////////////////////////////////////////////////////////////
@@ -132,8 +132,8 @@ function displayStarshipsData(data)
 {
   var listBox = document.getElementById("searchResults");
   listBox.innerHTML = "";
-  listBox.innerHTML = "<h2>Name: "+data.results[0].name+"</h2>"+
-    "<br><h2>Model: "+data.results[0].model+"</h2><br>"+
+  listBox.innerHTML = "<p>Name: "+data.results[0].name+"</p>"+
+    "<br><p>Model: "+data.results[0].model+"</p><br>"+
     "<p>Manufacturer: "+data.results[0].manufacturer+"</p><br>"+
     "<p>Cost in Credits: "+data.results[0].cost_in_credits+"</p><br>"+
     "<p>Length: "+data.results[0].length+"</p><br>"+
@@ -162,8 +162,8 @@ function displayVehiclesData(data)
 {
   var listBox = document.getElementById("searchResults");
   listBox.innerHTML = "";
-  listBox.innerHTML = "<h2>Name: "+data.results[0].name+"</h2>"+
-    "<br><h2>Model: "+data.results[0].model+"</h2><br>"+
+  listBox.innerHTML = "<p>Name: "+data.results[0].name+"</p>"+
+    "<br><p>Model: "+data.results[0].model+"</p><br>"+
     "<p>Manufacturer: "+data.results[0].manufacturer+"</p><br>"+
     "<p>Cost in Credits: "+data.results[0].cost_in_credits+"</p><br>"+
     "<p>Length: "+data.results[0].length+"</p><br>"+
