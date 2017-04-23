@@ -42,7 +42,7 @@ function extraData(asyncRequest, textName)
   var listBox = document.getElementById("searchResults");
   if (typeof data === 'string')
     alert(data);
-  else
+  else if (data)
     listBox.innerHTML += "<h2>"+textName+": "+data.name+"</h2><br>";
 }
 
@@ -53,8 +53,9 @@ function mainData(asyncRequest, newText)
   if (typeof data === 'string')
   {
     alert(data);
+    return;
   }
-  else
+  else if (data)
   {
     if (data.count == 0 && cartegoriesCounter <= 5)
     {
@@ -76,7 +77,10 @@ function mainData(asyncRequest, newText)
       else if(cartegoriesCounter == 5)
         displayVehiclesData(data);
       else
+      {
         alert("Either this doesn't exist in the WHOLE UNIVERSE or you typed it in wrong!!!");
+        return;
+      }
     }
   }
 }
