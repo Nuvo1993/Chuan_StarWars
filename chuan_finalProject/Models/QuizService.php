@@ -7,8 +7,8 @@
  * Time: 12:14 PM
  */
 
-require_once ('Models/QuizDAO.php');
-require_once ('Models/ValidationException.php');
+require_once ('QuizDAO.php');
+require_once ('ValidationException.php');
 
 class QuizService
 {
@@ -18,12 +18,6 @@ class QuizService
     {
         $this->quizDAO = new QuizDAO();
     }
-
-  /*  public function getAllQuizzes(){
-
-        $res = $this->quizDAO->selectAllQuizzes();
-        return $res;
-    }*/
 
     public function getQuiz(){
 
@@ -50,12 +44,6 @@ class QuizService
         return $res;
     }
 
- /*   public function getQuestion($id){
-
-        $res = $this->quizDAO->selectQuestion($id);
-        return $res;
-    }*/
-
     public function getAllAnswers(){
 
         $res = $this->quizDAO->selectAllAnswers();
@@ -77,6 +65,24 @@ class QuizService
     public function getTotalPoints($questionId, $answerId){
 
         $res = $this->quizDAO->getQuestionPoints($questionId, $answerId);
+        return $res;
+    }
+
+    public function getQuestionsByCategory($name){
+
+        $res = $this->quizDAO->selectQuestionsByCategory($name);
+        return $res;
+    }
+
+    public function getPointsByCategory(){
+
+        $res = $this->quizDAO->selectPointsByCategory();
+        return $res;
+    }
+
+    public function getQuestionCount(){
+
+        $res = $this->quizDAO->selectQuestionCount();
         return $res;
     }
 

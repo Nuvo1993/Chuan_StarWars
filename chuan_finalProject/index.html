@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Star Wars Search</title>
+
+    <link rel="stylesheet" href="Content/bootstrap_css/bootstrap.css">
+    <link rel="stylesheet" href="Content/bootstrap_css/bootstrap-theme.css">
+    <link rel="stylesheet" href="Content/styles.css">
+    <link rel="stylesheet" href="Content/starwarsintro.css">
+    <script src="Scripts/scripts.js"></script>
+
+</head>
+<body id="bootstrap-overrides">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Search Wars</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/searchwars">Home</a></li>
+                    <li><a href="Views/index.php">Quiz</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+<div class="collapse in" id="demo" onload="swapDiv()">
+    <div class="star-wars-intro">
+
+        <!-- Blue Intro Text -->
+        <p class="intro-text">
+            A long time ago in a campus not to far away...
+        </p>
+
+        <!-- Logo Image or Text goes in here -->
+        <h2 class="main-logo">
+            <img src="Content/imgs/Star_Wars_Logo..png">
+        </h2>
+
+        <!-- All Scrolling Content Goes in here -->
+        <div class="main-content">
+
+            <div class="title-content">
+                <p class="content-header">Star Wars<br/>Search Engine</p>
+
+                <br>
+
+                <p class="content-body">
+                    After weeks of hard work and dedication, one group managed to create a tool so powerful that it could change the populations knowledge of Star Wars forever!
+                </p>
+
+                <!-- button or link or whatever -->
+
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container">
+        <div class="starter-template">
+            <h1>The worlds first Star Wars search engine</h1>
+            <p class="lead">Probably not though...</p>
+            <div id="searchBar">
+                <span>Search for anything Star Wars related</span>
+                <input type="text" id="searchBox">
+                <input type="submit" value="Search" id="search" class="btn btn-default" onclick="search()">
+                <div id = "searchResults" style="padding: 5px;"></div>
+            </div>
+        </div>
+    </div><!-- /.container -->
+
+    <script src="Scripts/searchCall2.js"></script>
+    <script src="Scripts/bootstrap_js/jquery.min.js"></script>
+    <script src="Scripts/bootstrap_js/bootstrap.js"></script>
+</body>
+</html>

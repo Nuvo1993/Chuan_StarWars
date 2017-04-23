@@ -11,8 +11,8 @@ class Db{
 
     private static $dbhost = "localhost";
     private static $dbname = "star_wars";
-    private static $dbuser = "ipuser";
-    private static $dbpass = "F1kvPMKwEbMX6WQc";
+    private static $dbuser = "adminAustin";
+    private static $dbpass = "pass";
 
     /**
      * Db constructor.
