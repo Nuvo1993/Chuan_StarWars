@@ -8,7 +8,7 @@ function hideDiv(){
 }
 
 setInterval(function(){
-    $('#demo').collapse();
+    $('#demo').fadeOut();
 },15000);
 
 
