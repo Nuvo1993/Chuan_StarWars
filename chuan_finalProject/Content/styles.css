@@ -89,6 +89,10 @@ h3.category {
     color: whitesmoke;
 }
 
+a#textHref{
+    color: #ffd700;
+}
+
 .lightsaber { position: relative; }
 
 .lightsaber label {
