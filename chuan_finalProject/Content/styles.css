@@ -7,17 +7,22 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
+
+#bootstrap-overrides{
+    background-color: #0f0f0f;
+}
+
 .starter-template {
     padding: 40px 15px;
     text-align: center;
 }
 
-html {
-
-}
-
 a:hover, a:focus{
     color: black;
+}
+
+a{
+    color:black;
 }
 
 a:hover{
@@ -29,11 +34,10 @@ a:active{
     text-decoration: none;
 }
 
-a{
-    color:black;
+h3.category {
+    background-color: darkgray;
+    padding: 10px;
 }
-
-
 
 #starWarsIntro{
     height: 50%;
@@ -51,19 +55,6 @@ a{
     text-align: center;
 }
 
-h3.category {
-    background-color: darkgray;
-    padding: 10px;
-}
-
-
-#bootstrap-overrides{
-    background-color: #0f0f0f;
-}
-
-#introButton{
-
-}
 #search{
     color: black;
 }
@@ -73,14 +64,15 @@ h3.category {
 }
 
 #searchBox{
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
     color: black;
 }
 
 .questionGroup {
     text-align: justify;
+    padding: 10px;
 }
 
 #searchResults p{
@@ -96,10 +88,6 @@ h3.category {
     font-size: small;
     color: whitesmoke;
 }
-
-
-
-
 
 .lightsaber { position: relative; }
 
@@ -162,7 +150,7 @@ h3.category {
 }
 
 .lightsaber .plasma {
-    transition: height 300ms,;
+    transition: height 300ms;
     -moz-transition: height 300ms;
     -webkit-transition: height 300ms;
     -o-transition: height 300ms;
