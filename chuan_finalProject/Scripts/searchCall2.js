@@ -38,50 +38,51 @@ function callExtraWebService(textName, methodAndArguments, callBack)
 
 function extraData(asyncRequest, textName)
 {
-    var data = parseLoad(asyncRequest);
-    var listBox = document.getElementById("searchResults");
-    if (typeof data === 'string')
-        alert(data);
-    else if (data)
-        listBox.innerHTML += "<h2>"+textName+": "+data.name+"</h2><br>";
+  var data = parseLoad(asyncRequest);
+  var listBox = document.getElementById("searchResults");
+  if (typeof data === 'string')
+    alert(data);
+  else if (data)
+    listBox.innerHTML += "<h2>"+textName+": "+data.name+"</h2><br>";
 }
 
 ///checks to see the which is the right url, if not it gives you the right message////////////////////////////////////////
 function mainData(asyncRequest, newText)
 {
-    var data = parseLoad(asyncRequest);
-    if (typeof data === 'string')
+
+  var data = parseLoad(asyncRequest);
+  if (typeof data === 'string')
+  {
+    alert(data);
+    return;
+  }
+  else if (data)
+  {
+    if (data.count == 0 && cartegoriesCounter <= 5)
     {
         alert(data);
         return;
     }
     else if (data)
     {
-        if (data.count == 0 && cartegoriesCounter <= 5)
-        {
-            ++cartegoriesCounter;
-            callWebService(listOfCategories[cartegoriesCounter], newText, mainData);
-        }
-        else
-        {
-            if(cartegoriesCounter == 0)
-                displayFilmsData(data);
-            else if(cartegoriesCounter == 1)
-                displayPeopleData(data);
-            else if(cartegoriesCounter == 2)
-                displayPlanetsData(data);
-            else if(cartegoriesCounter == 3)
-                displaySpeciesData(data);
-            else if(cartegoriesCounter == 4)
-                displayStarshipsData(data);
-            else if(cartegoriesCounter == 5)
-                displayVehiclesData(data);
-            else
-            {
-                alert("Either this doesn't exist in the WHOLE UNIVERSE or you typed it in wrong!!!");
-                return;
-            }
-        }
+
+      if(cartegoriesCounter == 0)
+        displayFilmsData(data);
+      else if(cartegoriesCounter == 1)
+        displayPeopleData(data);
+      else if(cartegoriesCounter == 2)
+        displayPlanetsData(data);
+      else if(cartegoriesCounter == 3)
+        displaySpeciesData(data);
+      else if(cartegoriesCounter == 4)
+        displayStarshipsData(data);
+      else if(cartegoriesCounter == 5)
+        displayVehiclesData(data);
+      else
+      {
+        alert("Either this doesn't exist in the WHOLE UNIVERSE or you typed it in wrong!!!");
+        return;
+      }
     }
 }
 
