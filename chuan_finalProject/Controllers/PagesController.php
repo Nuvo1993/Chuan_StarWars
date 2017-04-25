@@ -9,6 +9,10 @@
 class PagesController
 {
 
+    public function index(){
+        require_once ('index.html');
+    }
+
     public function error() {
         require_once('../Views/error.html');
     }
