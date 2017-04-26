@@ -42,27 +42,30 @@ function extraData(asyncRequest, textName)
   var listBox = document.getElementById("searchResults");
   if (typeof data === 'string')
     alert(data);
-  else
-    listBox.innerHTML += "<p>"+textName+": "+data.name+"</p><br>";
+  else if (data)
+    listBox.innerHTML += "<h2>"+textName+": "+data.name+"</h2><br>";
 }
 
 ///checks to see the which is the right url, if not it gives you the right message////////////////////////////////////////
 function mainData(asyncRequest, newText)
 {
+
   var data = parseLoad(asyncRequest);
   if (typeof data === 'string')
   {
     alert(data);
+    return;
   }
-  else
+  else if (data)
   {
     if (data.count == 0 && cartegoriesCounter <= 5)
     {
-      ++cartegoriesCounter;
-      callWebService(listOfCategories[cartegoriesCounter], newText, mainData);
+        alert(data);
+        return;
     }
-    else
+    else if (data)
     {
+
       if(cartegoriesCounter == 0)
         displayFilmsData(data);
       else if(cartegoriesCounter == 1)
@@ -76,9 +79,11 @@ function mainData(asyncRequest, newText)
       else if(cartegoriesCounter == 5)
         displayVehiclesData(data);
       else
+      {
         alert("Either this doesn't exist in the WHOLE UNIVERSE or you typed it in wrong!!!");
+        return;
+      }
     }
-  }
 }
 
 function parseLoad(asyncRequest)
