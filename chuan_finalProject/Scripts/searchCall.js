@@ -1,5 +1,5 @@
 var webSericeUrl = "http://swapi.co/api/";
-var listOfCategories = ["films/?search=", "people/?search=", "planets/?search=", "species/?search=", "starships/?search=", "vehicles/?search=", "vehicles/?search="];
+var listOfCategories = ["films/?search=", "people/?search=", "planets/?search=", "species/?search=", "starships/?search=", "vehicles/?search=", "films/?search="];
 var cartegoriesCounter;
 //var commaCounter = 0;
 
@@ -50,7 +50,9 @@ function extraData(asyncRequest, textName)
     // var entry = document.getElementById(data.name);
     entry.setAttribute("id", data.name);
     entry.innerHTML += "<h2>"+textName+": "+data.name+"</h2><br>";
+    entry.style.cursor = "pointer";
     entry.onclick = function(){ callWebService(listOfCategories[0], data.name, mainData); };
+
     listBox.appendChild(entry);
   }
 }
@@ -237,10 +239,10 @@ function displayVehiclesData(data)
     "<h2>Cargo Capacity: "+data.results[0].cargo_capacity+"</h2><br>"
     "<h2>Consumables: "+data.results[0].consumables+"</h2><br>"+
     "<h2>Vehicle Class: "+data.results[0].vehicle_class+"</h2><br>";
-  for(var j=0; data.results[0].pilots.length > j; ++j)
-  {
-    callExtraWebService("Pilot", data.results[0].pilots[j], extraData);
-  }
+  // for(var j=0; data.results[0].pilots.length > j; ++j)
+  // {
+  //   callExtraWebService("Pilot", data.results[0].pilots[j], extraData);
+  // }
 }
 
 ///Removes the spaces of the text and adds the delimiter the plus sign////////////////////////////////
