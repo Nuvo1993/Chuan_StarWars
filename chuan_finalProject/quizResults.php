@@ -1,25 +1,14 @@
-<?php
-
-require_once ('../connection.php');
-
-if(isset($_GET['controller']) && isset($_GET['action'])){
-    $controller = $_GET['controller'];
-    $action = $_GET['action'];
-}else{
-    $controller = 'quiz';
-    $action = 'index';
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Star Wars Search</title>
 
-    <link rel="stylesheet" href="../Content/bootstrap_css/bootstrap.css">
-    <link rel="stylesheet" href="../Content/bootstrap_css/bootstrap-theme.css">
-    <link rel="stylesheet" href="../Content/styles.css">
+    <link rel="stylesheet" href="Content/bootstrap_css/bootstrap.css">
+    <link rel="stylesheet" href="Content/bootstrap_css/bootstrap-theme.css">
+    <link rel="stylesheet" href="Content/styles.css">
+    <link rel="stylesheet" href="Content/starwarsintro.css">
+    <script src="Scripts/scripts.js"></script>
 
 </head>
 <body id="bootstrap-overrides">
@@ -37,19 +26,34 @@ if(isset($_GET['controller']) && isset($_GET['action'])){
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="../index.html">Home</a></li>
-                <li class="active"><a href="?controller=quiz&action=index">Quiz</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="quizIndex.php">Quiz</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
 </nav>
 
-<div class="container">
-    <?php require_once('../routes.php'); ?>
-</div><!-- /.container -->
 
-<script src="../Scripts/searchCall2.js"></script>
-<script src="../Scripts/bootstrap_js/jquery.min.js"></script>
-<script src="../Scripts/bootstrap_js/bootstrap.js"></script>
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Josh
+ * Date: 4/26/2017
+ * Time: 1:26 AM
+ */
+
+    require_once('connection.php');
+    require_once('Controllers/QuizController.php');
+    require_once ('Models/QuizService.php');
+
+    $controller = new QuizController();
+    $controller->submit();
+
+?>
+
+<script src="Scripts/searchCall.js"></script>
+<script src="Scripts/bootstrap_js/jquery.min.js"></script>
+<script src="Scripts/bootstrap_js/bootstrap.js"></script>
 </body>
 </html>
+

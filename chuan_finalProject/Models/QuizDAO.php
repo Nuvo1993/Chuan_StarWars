@@ -23,8 +23,7 @@ class QuizDAO
     const SELECT_CATEGORY_BY_NAME = "SELECT * from quiz_category WHERE name = :name";
     //public const SELECT_QUESTION_BY_ID = "SELECT * from quiz_question WHERE id = :questionId";
     //public const SELECT_QUESTION_POINTS = "SELECT points from quiz_question WHERE id = :questionId";
-    const SELECT_IS_CORRECT_ANSWER = "SELECT answer, is_correct, points from quiz_answer" .
-                                            " INNER JOIN quiz_question ON quiz_answer.question_id = quiz_question.id where quiz_answer.id = :answerId and quiz_answer.question_id = :questionId";
+    const SELECT_IS_CORRECT_ANSWER = "SELECT answer, is_correct, points from quiz_answer INNER JOIN quiz_question ON quiz_answer.question_id = quiz_question.id where quiz_answer.id = :answerId and quiz_answer.question_id = :questionId";
     const SELECT_ANSWER_BY_QUESTION_ID = "SELECT * from quiz_answer WHERE question_id = :questionId";
 
     public function selectQuiz($quizId){
@@ -45,7 +44,7 @@ class QuizDAO
 
     public function selectAllCategories(){
 
-        $list = [];
+        $list = array();;
 
         $db = Db::getInstance();
         $req = $db->query(self::SELECT_ALL_CATEGORIES);
@@ -75,7 +74,7 @@ class QuizDAO
 
     public function selectAllQuestions(){
 
-        $list = [];
+        $list = array();
 
         $db = Db::getInstance();
         $req = $db->query(self::SELECT_ALL_QUESTIONS);
@@ -126,7 +125,7 @@ class QuizDAO
 
     public function selectAllAnswers(){
 
-        $list = [];
+        $list = array();
 
         $db = Db::getInstance();
         $req = $db->query(self::SELECT_ALL_ANSWERS);
@@ -149,7 +148,8 @@ class QuizDAO
 
     public function selectAnswerByQuestion($questionId){
 
-        $list = [];
+        $list = array();
+
         $questionId = intval($questionId);
 
         $db = Db::getInstance();
@@ -174,7 +174,7 @@ class QuizDAO
 
         $query = 'SELECT * FROM quiz_question WHERE category_name = :name';
 
-        $list = [];
+        $list = array();
 
         $db = Db::getInstance();
         $req = $db->prepare($query);
@@ -201,7 +201,7 @@ class QuizDAO
 
         $query = 'SELECT category_name, SUM(points) AS category_points FROM quiz_question GROUP BY category_name';
 
-        $list = [];
+        $list = array();
 
         $db = Db::getInstance();
         $req = $db->query($query);

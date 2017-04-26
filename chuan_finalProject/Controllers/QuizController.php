@@ -15,7 +15,7 @@ class QuizController
         $categories = $serviceQuestions->getAllCategories();
 
         //includes quiz php
-        require_once ('../Views/quiz.php');
+        require_once ('quiz.php');
     }
 
     public function submit(){
@@ -100,15 +100,15 @@ class QuizController
                               <!-- Wrapper for slides -->
                               <div class="carousel-inner" role="listbox">
                                 <div class="item active">
-                                  <img class="carouselImg" src="../Content/imgs/above90/yoda1.jpg" alt="yoda1">
+                                  <img class="carouselImg" src="Content/imgs/above90/yoda1.jpg" alt="yoda1">
                                 </div>
                             
                                 <div class="item">
-                                  <img class="carouselImg" src="../Content/imgs/above90/yoda2.jpg" alt="yoda2">
+                                  <img class="carouselImg" src="Content/imgs/above90/yoda2.jpg" alt="yoda2">
                                 </div>
                             
                                 <div class="item">
-                                  <img class="carouselImg" src="../Content/imgs/above90/yoda3.jpg" alt="yoda3">
+                                  <img class="carouselImg" src="Content/imgs/above90/yoda3.jpg" alt="yoda3">
                                 </div>
                             
                               </div>
@@ -141,15 +141,15 @@ class QuizController
                               <!-- Wrapper for slides -->
                               <div class="carousel-inner" role="listbox">
                                 <div class="item active">
-                                  <img class="carouselImg" src="../Content/imgs/between80-89/rey1.png" alt="rey1">
+                                  <img class="carouselImg" src="Content/imgs/between80-89/rey1.png" alt="rey1">
                                 </div>
                             
                                 <div class="item">
-                                  <img class="carouselImg" src="../Content/imgs/between80-89/rey2.jpg" alt="rey2">
+                                  <img class="carouselImg" src="Content/imgs/between80-89/rey2.jpg" alt="rey2">
                                 </div>
                             
                                 <div class="item">
-                                  <img class="carouselImg" src="../Content/imgs/between80-89/rey3.jpg" alt="rey3">
+                                  <img class="carouselImg" src="Content/imgs/between80-89/rey3.jpg" alt="rey3">
                                 </div>
                             
                               </div>
@@ -165,7 +165,7 @@ class QuizController
                               </a>
                             </div>
                             <p>You are a very strong with the force! But you still have more to learn.</p>
-                <   /div>';
+                </div>';
 
             }elseif ($score >= 70 && $score <= 79){
 
@@ -183,15 +183,15 @@ class QuizController
                               <!-- Wrapper for slides -->
                               <div class="carousel-inner" role="listbox">
                                 <div class="item active">
-                                  <img class="carouselImg" class="carouselImg" src="../Content/imgs/between70-79/obi1.jpg" alt="Obi1">
+                                  <img class="carouselImg" class="carouselImg" src="Content/imgs/between70-79/obi1.jpg" alt="Obi1">
                                 </div>
                             
                                 <div class="item">
-                                  <img class="carouselImg" class="carouselImg" src="../Content/imgs/between70-79/obi2.jpg" alt="Obi2">
+                                  <img class="carouselImg" class="carouselImg" src="Content/imgs/between70-79/obi2.jpg" alt="Obi2">
                                 </div>
                             
                                 <div class="item">
-                                  <img class="carouselImg" class="carouselImg" src="../Content/imgs/between70-79/between70-79.jpg" alt="Obi3">
+                                  <img class="carouselImg" class="carouselImg" src="Content/imgs/between70-79/between70-79.jpg" alt="Obi3">
                                 </div>
                             
                               </div>
@@ -224,19 +224,19 @@ class QuizController
                               <!-- Wrapper for slides -->
                               <div class="carousel-inner" role="listbox">
                                 <div class="item active">
-                                  <img class="carouselImg" src="../Content/imgs/between60-69/han1.jpg" alt="han1">
+                                  <img class="carouselImg" src="Content/imgs/between60-69/han1.jpg" alt="han1">
                                 </div>
                             
                                 <div class="item">
-                                  <img class="carouselImg" src="../Content/imgs/between60-69/han2.png" alt="han2">
+                                  <img class="carouselImg" src="Content/imgs/between60-69/han2.png" alt="han2">
                                 </div>
                             
                                 <div class="item">
-                                  <img class="carouselImg" src="../Content/imgs/between60-69/han1.jpg" alt="han3">
+                                  <img class="carouselImg" src="Content/imgs/between60-69/han1.jpg" alt="han3">
                                 </div>
                             
                                 <div class="item">
-                                  <img class="carouselImg" src="../Content/imgs/between60-69/han2.png" alt="han4">
+                                  <img class="carouselImg" src="Content/imgs/between60-69/han2.png" alt="han4">
                                 </div>
                               </div>
                             
@@ -268,19 +268,19 @@ class QuizController
                               <!-- Wrapper for slides -->
                               <div class="carousel-inner" role="listbox">
                                 <div class="item active">
-                                  <img class="carouselImg" src="../Content/imgs/below60/jar1.jpg" alt="jar1">
+                                  <img class="carouselImg" src="Content/imgs/below60/jar1.jpg" alt="jar1">
                                 </div>
                             
                                 <div class="item">
-                                  <img class="carouselImg" src="../Content/imgs/below60/jar.png" alt="jar2">
+                                  <img class="carouselImg" src="Content/imgs/below60/jar.png" alt="jar2">
                                 </div>
                             
                                 <div class="item">
-                                  <img class="carouselImg" src="../Content/imgs/below60/jar_3.jpg" alt="jar3">
+                                  <img class="carouselImg" src="Content/imgs/below60/jar_3.jpg" alt="jar3">
                                 </div>
                             
                                 <div class="item">
-                                  <img class="carouselImg" src="../Content/imgs/below60/jar4.jpg" alt="jar4">
+                                  <img class="carouselImg" src="Content/imgs/below60/jar4.jpg" alt="jar4">
                                 </div>
                               </div>
                             
@@ -300,6 +300,8 @@ class QuizController
             }
 
             echo '</div>';
+
+            require_once('quizResults.php');
         }
     }
 }
