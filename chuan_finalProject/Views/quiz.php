@@ -20,7 +20,7 @@
             ?>
             <div class="categoryGroup">
                 <h3 class="category">
-                    <a data-toggle="collapse" href="#categoryGroup<?php echo $categoryIndex ?>">
+                    <a class="categoryLink" data-toggle="collapse" href="#categoryGroup<?php echo $categoryIndex ?>">
                         <?php
                         //get one header per category.
                         $current = $value->getName();
