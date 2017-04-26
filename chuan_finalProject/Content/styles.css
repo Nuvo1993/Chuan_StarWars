@@ -200,7 +200,7 @@ a#textHref{
 }
 
 .lightsaber .plasma {
-    transition: height 300ms,;
+    transition: height 300ms;
     -moz-transition: height 300ms;
     -webkit-transition: height 300ms;
     -o-transition: height 300ms;
