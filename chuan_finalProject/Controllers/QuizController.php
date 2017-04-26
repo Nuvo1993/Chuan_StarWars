@@ -14,7 +14,7 @@ class QuizController
         //Gets all categories
         $categories = $serviceQuestions->getAllCategories();
 
-        //includes quix php
+        //includes quiz php
         require_once ('../Views/quiz.php');
     }
 
@@ -78,7 +78,7 @@ class QuizController
 
             }
 
-            echo '<div class="learnMoreText"><p>Use the <a href="../index.html">search</a> to learn more about the Star Wars universe.</p></div>';
+            echo '<div class="learnMoreText"><p>Use the <a id="textHref" href="../index.html">search</a> to learn more about the Star Wars universe.</p></div>';
 
             //calculate overall score and display.
             $score = ($userCategoryPoints/$totalCategoryPoints) * 100;

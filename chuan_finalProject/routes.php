@@ -27,7 +27,7 @@ function call($controller, $action) {
 
 // just a list of the controllers we have and their actions
 // we consider those "allowed" values
-$controllers = array('pages' => ['error'],
+$controllers = array('pages' => ['index', 'error'],
                       'quiz' => ['index', 'submit']);
 
 // check that the requested controller and action are both allowed
